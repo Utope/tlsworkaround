@@ -5,7 +5,7 @@ $curl = curl_init();
 curl_setopt_array($curl, array(
     CURLOPT_URL => "https://bseipp-sagetest.cs67.force.com/services/apexrest/RestController/get?sObjectType=Account",
     CURLOPT_SSLVERSION => 6,
-    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_RETURNTRANSFER => true
 ));
 
 
@@ -15,7 +15,9 @@ $err = curl_error($curl);
 curl_close($curl);
 
 if ($err) {
+    echo $response;
     return "cURL Error #:" . $err;
 } else {
+    echo $response;
     return "bwah" . $response;
 }

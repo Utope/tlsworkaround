@@ -2,8 +2,10 @@
 //Send to salesforce
 $curl = curl_init();
 
+$sObjectType = $_POST['sObjectType'];
+
 curl_setopt_array($curl, array(
-    CURLOPT_URL => "https://bseipp-sagetest.cs67.force.com/services/apexrest/RestController/get?sObjectType=Account",
+    CURLOPT_URL => "https://bseipp-sagetest.cs67.force.com/services/apexrest/RestController/get?sObjectType=" . $sObjectType,
     CURLOPT_SSLVERSION => 6,
     CURLOPT_RETURNTRANSFER => true
 ));

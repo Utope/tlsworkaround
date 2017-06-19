@@ -17,7 +17,7 @@ $err = curl_error($curl);
 curl_close($curl);
 
 if ($err) {
-    return "cURL Error #:" . $err;
+    echo "cURL Error #:" . $err;
 } else {
-    return $response;
+    echo $response;
 }

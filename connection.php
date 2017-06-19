@@ -2,7 +2,7 @@
 //Send to salesforce
 $curl = curl_init();
 
-$sObjectType = $_POST['sObjectType'];
+$sObjectType = $_GET['sObjectType'];
 
 curl_setopt_array($curl, array(
     CURLOPT_URL => "https://bseipp-sagetest.cs67.force.com/services/apexrest/RestController/get?sObjectType=" . $sObjectType,
